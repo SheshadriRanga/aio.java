@@ -699,7 +699,7 @@ public class App extends JFrame implements ActionListener {
 
     private int loadPinFromFile() {
         try {					
-        	 File file = new File("C:\\Users\\Admin\\Desktop\\aio\\pin");
+        	 File file = new File("\pin");
           //  File file = new File("C:\\Users\\Admin\\Desktop\\AioWebPage\\pin.txt");//C:\Users\Admin\Desktop\aio
             if (file.exists()) {
                 Scanner scanner = new Scanner(file);
@@ -715,7 +715,7 @@ public class App extends JFrame implements ActionListener {
     }
 
     private void savePinToFile(int pin) {
-        try (FileWriter writer = new FileWriter("C:\\Users\\Admin\\Desktop\\aio\\pin")) {
+        try (FileWriter writer = new FileWriter("\pin")) {
             writer.write(String.valueOf(pin));
            // System.out.println("PIN saved to file.");
         } catch (IOException e) {
